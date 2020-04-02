@@ -1,0 +1,138 @@
+header{ margin-bottom: 0rem !important; width:100%;}
+main{
+width:100%;
+height: 700px;
+}
+aside{
+width: 15%;
+height: 700px;
+margin-top: 5px;
+overflow-y: auto;
+background-color: #17a2b8 !important;
+}
+.work{
+width:100%;
+height:50px !important;
+}
+.work:hover {background-color: #343a40 ;}
+
+.work a{  text-decoration: none !important; }
+article{
+width:84%;
+height:700px;
+}
+.c {display: none;}
+footer{
+width: 100%;
+height:200px;
+margin-left: 0px !important;
+}
+.circle{
+  right: 156px;
+top: 97px;
+border-radius: 100%;
+ }
+ .cards{width: 100%; height: 500px; font-size: 20px;}
+ nav
+ {
+   right: 63px;
+       top: 350px;
+       height: 100px;
+       padding: 5px !important;
+       width: 354px
+ }
+ .hambug{ display: none; cursor: pointer; }
+ nav a{
+   text-decoration: none;
+   color:white;
+   margin-top: 10px;
+ font-size: 25px;
+ padding-left: 22px
+ }
+
+@media screen and (max-width:992px)
+{
+  article{background-color: red;
+    width:100%;
+    margin:0px !important;
+  }
+  .circle{
+    right: 42%;
+      top: 121px;
+      border-radius: 100%;
+      height: 120px;
+      width: 120px;
+  }
+   aside
+   {
+      position: fixed;
+      width: 250px;
+      height:100vh ;
+      z-index:1020;
+      display: none ;
+      top:0;
+      box-shadow: 5px 6px 10px 3px white;
+    }
+   .c{    font-size: 15px;
+    display: inline;
+    top: -55px; left: 50px; cursor: pointer;}
+   nav
+   {
+    right: 0px;
+    top: 337px;
+    height: 100px;
+    padding: 5px !important;
+    width: 99%;
+    z-index: 1;
+   }
+   .cards{   padding-top: 15px;}
+   .hambug{
+     display: block;
+     height:35px;
+     width:60px;
+    margin: 10px;
+   }
+   .hambug div{ width: 40px; height: 2px; background-color: white;
+    border-radius: 20%;
+    margin: 10px; }
+}
+
+@media screen and (max-width:576px)
+{
+
+  article{background-color:green ;
+    width:100%;
+    margin:0px;
+    height:700px;s
+  }
+  aside
+  {
+     position: fixed;
+     width: 250px;
+     height:100vh ;
+     z-index: 1020;
+     display: none ;
+     top:0;
+     box-shadow: 5px 6px 10px 3px white;
+   }
+  .circle{
+    right: 42%;
+      top: 85px;
+      border-radius: 100%;
+      height: 85px;
+      width: 85px;
+   }
+   .cards{   padding-top: 15px;}
+      nav
+   {
+     right: 1px;
+   top: 260px;
+   height: 100px;
+   padding: 5px !important;
+   width: 100%;
+   z-index: 1
+   }
+   .c{font-size: 15px;
+    display: inline;
+    top: -30px; left: 50px;}
+}
