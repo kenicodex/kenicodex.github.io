@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital evolution</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <aside class="position-fixed bg-light shadow" id='sidebar' >
+  </aside>
+
+    <navbar class="d-flex w-auto bg-dark" id='navbar'>
+    </navbar>
+    <script src="../javascript/navbar.js"></script>
+    <main class="w-100">
+
+      <div id='slide' class="w-100 bg-dark h1 text-light">  
+      <div class="position-relative w-100 d-flex" style="top:40%;">
+        <button onclick="change(-1)" class="btn-success m-2 btn">l</button> 
+        <button class="position-absolute btn btn-success m-2" style="right: 0;" onclick="change(+1)">r</button>
+      </div>
+        <div class="position-relative text-center center" style="top: 35%;">
+          <!-- <style>
+              @media screen and (max-width: 992px){
+                .font-sm{ } 
+              }
+          </style> -->
+          <div class="font-sm" style="font-size: 100%"  contenteditable="true">High-End  Graphics</div>
+          <button class="btn-outline-light btn pl-5 pr-5" style="background-image: inherit;">btn</button>
+          <button class="btn-outline-light btn pl-5 pr-5" style="background-image: inherit;">btn</button>
+        </div>
+      </div>
+      <div class="container p-lg-5">
+        <div class="text-center bg-dark jumbotron shadow text-light h3" style="cursor: pointer;" onclick="seemore(this)"> Graphics are useful for success business  
+          <div class="bg-light rounded extra-text h6 text-dark p-2"> extra-textmfvv <br> <br> <br> <br> </div>
+        </div>
+        <div class="text-center bg-dark jumbotron shadow text-light h3" style="cursor: pointer;" onclick="seemore(this)"> why you need graphics
+          <div class="bg-light rounded extra-text h6 text-dark p-2"> extra-text</div>
+        </div> 
+        <div class="text-center bg-dark jumbotron shadow text-light h3" style="cursor: pointer;" onclick="seemore(this)"> Photo editing that grasps the attention of your customers 
+          <div class="bg-light rounded extra-text h6 text-dark p-2"> extra-text</div>
+        </div>
+        <div class="text-center bg-dark jumbotron shadow text-light h3" style="cursor: pointer;" onclick="seemore(this)"> Advertisement packages , making banners panfletes bills and so on
+          <div class="bg-light rounded extra-text h6 text-dark p-2"> extra-text</div>
+        </div>
+      </div>
+    </main>
+</body>
+<script src="../javascript/graphics.js"></script>
+<script src="../javascript/sidebar.js"></script>
+</html>
+

@@ -1,0 +1,28 @@
+.split{ position: fixed; height: 100vh; width:65%; top: 200px;}
+.split1{ left: 0;
+    top: 0; 
+    background-image: url('C:/Users/PC/Desktop/wallpaper/workspace/way.jpg');
+    background-repeat: no-repeat; background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%); 
+  }
+  .split2{
+    right: 0;
+    top: 0;
+    background-image: url(http://via.placeholder.com/350x150/fc9fc9);
+    -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%)
+  }
+  #slide{
+    transition: background-image 2s;
+    width: 100%;
+    height: 70vh; 
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+  .extra-text{
+    display: none;
+    width: 100%;
+    height: 0;
+    transition: height 2s, display 2s;
+  }

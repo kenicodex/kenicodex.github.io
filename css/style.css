@@ -1,0 +1,36 @@
+a{  color: white; font-size: large; background-color: inherit;}  
+nav a{ transition: background-color 1s; }
+nav a:hover { background-color: black; color : white; }
+.link{  height: 250px; justify-content: center; }
+
+a:hover{text-decoration: none;}
+aside{opacity: 0; display: none;} 
+main{   width: 75%; margin: auto;   }
+
+.bars{ display: none; left: 87%; position: absolute; }
+
+ #banner{
+     background-image: url('../images/bus.jpg'); width: 100%; height: 400px;
+      background-repeat: no-repeat; background-size: cover; filter: blur(2px); 
+ }
+.headtxt{top: 150px;  }
+.pictures{background-color: #343a40 !important;  background-size: cover; width: 100vw; height: 100vh;  background-attachment: fixed;}
+.img:hover{    box-shadow: -1px -1px 12px 5px black; 
+    height: 400px; width: 400px; z-index: 100; position: relative;
+}
+@media screen and (max-width:992px){
+    nav a {
+        display: none;
+    }
+    .bars{
+        display: block;
+    }
+    main{
+        width: 100%;
+        margin: auto;
+    }
+    aside{height: 100vh; z-index: 100;opacity: 1; display: block;}
+    .img:hover{    box-shadow:none;
+        height: auto; width: 100%; z-index: 10;
+    }
+}
