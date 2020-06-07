@@ -4,10 +4,12 @@ navbar.innerHTML = `
       <div class="brand h4 m-3 text-light" style=${style}>Sleek Codes</div>
       <nav class="d-flex w-auto">
         <a href="index.html" class="p-3 pl-5 pr-5">Home  <i class="fa fa-home"> </i> </a>
-        <a href="graphics.html" class="p-3 pl-5 pr-5">Graphics </i> </a>
-        <a href="website.html" class="p-3 pl-5 pr-5">Website </i> </a>
-        <a href="gallery.html" class="p-3 pl-5 pr-5">Gallery </i> </a>
-        <a href="#" class="p-3 pl-5 pr-5">Pricing </i> </a> 
+        <a href="graphics.html" class="p-3 pl-5 pr-5">Graphics </a>
+        <a href="website.html" class="p-3 pl-5 pr-5">Website </a>
+        <a href="gallery.html" class="p-3 pl-5 pr-5">Gallery </a>
+        <a href="#" class="p-3 pl-5 pr-5">Pricing </a> 
+        <a href="#" class="p-3 pl-5 pr-5">Contact </a>
+        <a href="#" class="p-3 pl-5 pr-5">About Us </a> 
       </nav>
      <div class="bars text-right pt-3 pl-md-2 pl-sm-2" style='cursor:pointer;'>
       <div class='menu' onclick='menu()'> 

@@ -30,7 +30,7 @@ content.map(({Name, Link, src, alt})=>{
     var main =  document.getElementById('main')
     main.innerHTML +=` 
                         <div class="col-lg-3 col-md-4 col-sm-12">
-                            <div class="m-1 bg-white">
+                            <div class="m-1 bg-white border shadow">
                                 <h5 class="card-title p-2">${Name}</h5>
                                 <h6 class="card-subtitle mb-2 p-2 text-muted">Card subtitle</h6>
                                 <img src="${src}" alt="${alt}" width="100%" height="auto" />

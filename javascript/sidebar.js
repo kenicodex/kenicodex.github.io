@@ -18,19 +18,27 @@ sidebar.innerHTML = `
 The No. 1 Graphics design and Web development assistant 
 </div>
 <div id='content'>
-</div>`
+</div>
+<style>
+        .sidelink:{
+
+        }
+</style>
+`
 const links = [
     {Page : 'Home', Link : 'index.html'},
     {Page : 'Graphics', Link : 'graphics.html'},
     {Page : 'Websites', Link : 'website.html'},
     {Page : 'Gallery', Link : 'gallery.html'}, 
-    {Page : 'Pricing', Link : '/'}
+    {Page : 'Pricing', Link : '/'},
+    {Page : 'Contact', Link : '/'},
+    {Page : 'About Us', Link : '/'}
 ]
 
 links.forEach(element => {
     document.getElementById('content').innerHTML += `
     <a href="${element.Link}">
-    <div class="w-100 p-3 text-center bg-dark sidelink border-bottom" >
+    <div class="w-100 p-3 text-center btn-dark btn sidelink border-bottom" >
     ${element.Page}
     </div>  </a>`
 });
