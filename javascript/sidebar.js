@@ -30,15 +30,7 @@ const links = [
 links.forEach(element => {
     document.getElementById('content').innerHTML += `
     <a href="${element.Link}">
-    <div class="w-100 p-3 text-center bg-info sidelink border-bottom" >
+    <div class="w-100 p-3 text-center bg-dark sidelink border-bottom" >
     ${element.Page}
     </div>  </a>`
 });
-var li = document.getElementsByClassName("sidelink")
-li.forEach(element => {
-    element.style.backgroundColor = 'red'
-});
-var body = document.getElementsByTagName('body')
-body[1].addEventListener('click', function(){
-    alert('df')
-})
