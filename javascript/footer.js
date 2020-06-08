@@ -30,6 +30,10 @@ const newLocal = `
         </div>
     </div> 
 </div>   
-<div class="w-100  p-2 bg-white text-dark text-center"> facebook</div>
+
+<div class="w-100  p-2 bg-white text-dark text-center"> <i class="m-1 fa fa-"> 
+    </i> <i class="m-1 fa fa-facebook-f"> </i> <i class="m-1 fa fa-twitter"> </i> <i class="m-1 fa fa-instagram"> </i> 
+    <i class="m-1 fa fa-whatsapp"> </i>     
+</div>
 `
 foot.innerHTML = newLocal
