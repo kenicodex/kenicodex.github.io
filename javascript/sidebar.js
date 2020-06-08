@@ -30,7 +30,7 @@ const links = [
     {Page : 'Graphics', Link : 'graphics.html'},
     {Page : 'Websites', Link : 'website.html'},
     {Page : 'Gallery', Link : 'gallery.html'}, 
-    {Page : 'Pricing', Link : '/'},
+    {Page : 'Pricing', Link : 'pricing.html'},
     {Page : 'Contact', Link : '/'},
     {Page : 'About Us', Link : '/'}
 ]

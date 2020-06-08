@@ -10,25 +10,52 @@
   <script src="../javascript\navbar.js"></script>
  
   <div class="container bg-white p-3">
-      <h2>Our price are cheap and you save up 60%</h2>
-      To have a website b
+      <h2 class="jumbotron bg-success">Our prices are cheap and you save up 60%</h2>
       <div>
-          Talk to us now , we reply in less than a minute  <br>
+          Talk to us now , we reply in less than a minute  <hr>
           <div id="chat">
               
           </div>
-          dcd
-        <form onsubmit="send(event)">  <input type="text" id="message" class="p-2 border m-2">
-
+        <form onsubmit="send(event)">  <input type="text" id="message" class="p-1 border m-2 form-control" placeholder="enter your message">
+            
         </form>
 
           <script>
-              let x = 0
+            function createMessage(position,color, message) {
+            let li = document.createElement("div")   
+            let txt = document.createTextNode(message)  
+            li.appendChild(txt) 
+            document.getElementById("chat").appendChild(li) 
+            li.style = `height:auto;background-color: ${color};padding:1em;margin:2px;border-radius:5px; width:50%;margin-${position}:50%;`  
+            process(message)
+            }
           function send(e){
-            e.preventDefault()
-            x++
-            var customer  = document.getElementById("message").value
-            localStorage.setItem(x, customer)
+            var customer  = document.getElementById("message").value  
+            createMessage("left","#527ebf",customer)
+            document.getElementById("message").value = ""
+          }
+          const process =(question)=>{
+            var greet = ['hello', 'hi', 'whatsup', 'hey']
+            var bye = ['', 'bye', 'good night']
+            var createweb = (question.includes("buy a website")||question.includes("make a website") || question.includes("create a website"))
+            var creategraphic = (question.includes("buy a graphic")||question.includes("make a graphic") || question.includes("create a graphic")||question.includes("Edit a photo"))
+            var typeweb = (question.includes("how much "))
+            var bye = (question.includes("goodbye")||question.includes("bye") || question.includes("good night") || question.includes("talk to you later"))
+            if (greet.includes(question.toLowerCase())){
+                createMessage("right","#f600fa","Hi there,how are you feeling today? how may we help you? do yo wish to create a website or request a graphic design")
+            }else if(createweb){
+                createMessage("right","#f600fa","Simply visit is our website page or contact us on 08056499531, 08085503290, 07054008872, also what can kind of website would ou like to create? check website page for type of websites we create")
+            }else if(creategraphic){
+                createMessage("right","#f600fa","Simply visit is our graphics page or contact us on 08056499531, 08085503290, 07054008872, also what aspect of graphics are you interested in? Photo editing,creating banners, palmflettes, photoshot editing?  ")
+            }else if(byes){
+                createMessage("right","#f600fa","Thanks for patronizing us, please do visit again and tell your friends about us. Bye now 👋🏽 ")
+            }else if(typeweb){
+                createMessage("right","#f600fa","Our websites and graphics aren't expensise at all, you can create one at 40% discount, for much information type \"more info\" ")
+            }else if(question == "more info"){
+                createMessage("right","#f600fa","price as low as N2500 per page of a website, price for graphics and photo editing range N2000 to N10000, if you would like to chat with a human being type \"live chat\"")
+            }else if(question == "live chat"){
+                createMessage("right","#f600fa","price as low as N2500 per page of a website, price for graphics and photo editing range N2000 to N10000, if you would like to chat with a human being type \"live chat\"")
+            }
           }
           </script>
       </div>

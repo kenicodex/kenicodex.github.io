@@ -1,5 +1,5 @@
-var x = ['', '../gallery/gallery (1).jpg', '../gallery/gallery (2).jpg', 
-          '../gallery/gallery (3).jpg', '../gallery/gallery (4).jpg']
+var x = ['', document.getElementById("img1").value, document.getElementById("img2").value, 
+document.getElementById("img3").value, document.getElementById("img4").value,]
 var image =  document.getElementById('slide')
         image.style.backgroundImage = `url('${x[4]}')` //= `<img src='${x[4]}' alt="">`
 let i = 0
