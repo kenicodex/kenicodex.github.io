@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head id="css">
+    </head>
+<body class="bg-light">
+  <aside class="position-fixed bg-light shadow" id='sidebar' >
+  </aside>
+  <navbar class="d-flex bg-dark" id='navbar'>
+  </navbar>
+  <script src="../javascript\navbar.js"></script>
+ 
+  <div class="container bg-white p-3">
+      <h2>Our price are cheap and you save up 60%</h2>
+      To have a website b
+      <div>
+          Talk to us now , we reply in less than a minute  <br>
+          <div id="chat">
+              
+          </div>
+          dcd
+        <form onsubmit="send(event)">  <input type="text" id="message" class="p-2 border m-2">
+
+        </form>
+
+          <script>
+              let x = 0
+          function send(e){
+            e.preventDefault()
+            x++
+            var customer  = document.getElementById("message").value
+            localStorage.setItem(x, customer)
+          }
+          </script>
+      </div>
+
+  </div>
+  <footer id="footer"></footer>
+</body>
+<script src="../javascript/index.js"></script>
+<script src="../javascript/sidebar.js"></script>
+<script src="../javascript/footer.js"></script>
+<script src="../javascript/head.js"></script>
+</html>
+

@@ -7,9 +7,9 @@ navbar.innerHTML = `
         <a href="graphics.html" class="p-3 pl-5 pr-5">Graphics </a>
         <a href="website.html" class="p-3 pl-5 pr-5">Website </a>
         <a href="gallery.html" class="p-3 pl-5 pr-5">Gallery </a>
-        <a href="#" class="p-3 pl-5 pr-5">Pricing </a> 
-        <a href="#" class="p-3 pl-5 pr-5">Contact </a>
-        <a href="#" class="p-3 pl-5 pr-5">About Us </a> 
+        <a href="pricing.html" class="p-3 pl-5 pr-5">Pricing </a> 
+        <a href="Contact.html" class="p-3 pl-5 pr-5">Contact </a>
+        <a href="about.html" class="p-3 pl-5 pr-5">About Us </a> 
       </nav>
      <div class="bars text-right pt-3 pl-md-2 pl-sm-2" style='cursor:pointer;'>
       <div class='menu' onclick='menu()'> 
