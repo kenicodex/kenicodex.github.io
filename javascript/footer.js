@@ -25,8 +25,10 @@ const newLocal = `
 
     <div class="col-lg-4 col-md-1" style="height:200px;">
         <div class="p-2">
-            <h3 class="text-warning"> Contact us </h3>
-            <p class="pl-1 text-white"> We are society that helps with web development and graphic design </p>
+            <h3 class="text-info">Useful links</h3>
+            <a href="#" >About us </a>
+            <a href="gallery.html" >Gallery </a>
+            <a href="#" >how much does it cost to create a website </a>
         </div>
     </div> 
 </div>   
