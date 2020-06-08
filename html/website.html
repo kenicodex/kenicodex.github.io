@@ -23,18 +23,35 @@
         </div>
       </div>
 
-        <div class="container d-lg-flex">
-          <div class="card m-2 p-2 col-lg-4 col-sm-12">
-            <h3>Explore Templates</h3>
-          </div>
-          <div class="card m-2 p-2 col-lg-4 col-sm-12">
-            <h3>Types of Websites</h3>
-          </div>
-          <div class="card m-2 p-2 col-lg-4 col-sm-12">
-            <div></div>
-          </div>
+        <div class="container row m-auto" id="types">
         </div>
     </main>
+    <script>
+      var types = [{name : 'E-Commerce',img :'../images/ecomm.jpg', description : 'E-Commerce, also known as e-Business, or electronic business, is simply the sale and purchase of services and goods over an electronic medium, like the Internet. It also involves electronically transferring data and funds between two or more parties. Simply put, it is online shopping as we commonly know it', temp :''},
+                   {name : 'Blogs',img :'../images/blog.jfif', description : 'A blog is a type of website where the content is presented in reverse chronological order (newer content appear first). Blog content is often referred to as entries or “blog posts”. Blogs are typically run by an individual or a small group of people to present information in a conversational style', temp : ''},
+                   {name : 'Online Magazine',img :'../images/magazine.jfif', description : 'In some ways, starting a magazine today is easier than ever. But in others, it can be more difficult. All of this is due to the internet. The web puts free information at everyone\'s fingertips, instantly available through mobile devices, which has transformed the magazine industry. It also gives every person online the opportunity to create high quality content and express themselves to a wide audience.', temp : ''},
+                   {name : 'Portfolio websites',img :'', description : '', temp : ''},
+                   {name : '',img :'', description : '', temp : ''},
+                   {name : '',img :'', description : '', temp : ''},
+                   {name : '',img :'', description : '', temp : ''},
+                   {name : '',img :'', description : '', temp : ''},
+    ]
+      var type = document.getElementById('types')
+     types.forEach(element => {
+      type.innerHTML += `
+      <div class="m-2 p-2 col-lg-3 col-sm-12">
+            <div class="card  w-100">
+              <img class="card-img-top" src='${element.img}'alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">${element.name}</h5>
+                <p class="card-text">${element.description}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+     </div>
+      `
+     });
+    </script>
     <footer id="footer"></footer>
 </body>
 <script src="../javascript/graphics.js"></script>
