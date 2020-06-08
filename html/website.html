@@ -9,7 +9,7 @@
     <navbar class="d-flex w-auto bg-dark" id='navbar'>
     </navbar>
     <script src="../javascript/navbar.js"></script>
-    <main class="w-100">
+    <main class="w-100 bg-light">
 
       <div id='slide' class="w-100 bg-dark h1 text-light">  
         <div class="position-relative w-100 d-flex" style="top:40%;">
@@ -30,8 +30,8 @@
       var types = [{name : 'E-Commerce',img :'../images/ecomm.jpg', description : 'E-Commerce, also known as e-Business, or electronic business, is simply the sale and purchase of services and goods over an electronic medium, like the Internet. It also involves electronically transferring data and funds between two or more parties. Simply put, it is online shopping as we commonly know it', temp :''},
                    {name : 'Blogs',img :'../images/blog.jfif', description : 'A blog is a type of website where the content is presented in reverse chronological order (newer content appear first). Blog content is often referred to as entries or “blog posts”. Blogs are typically run by an individual or a small group of people to present information in a conversational style', temp : ''},
                    {name : 'Online Magazine',img :'../images/magazine.jfif', description : 'In some ways, starting a magazine today is easier than ever. But in others, it can be more difficult. All of this is due to the internet. The web puts free information at everyone\'s fingertips, instantly available through mobile devices, which has transformed the magazine industry. It also gives every person online the opportunity to create high quality content and express themselves to a wide audience.', temp : ''},
-                   {name : 'Portfolio websites',img :'', description : '', temp : ''},
-                   {name : '',img :'', description : '', temp : ''},
+                   {name : 'Portfolio websites',img :'../images/portfolio.jfif', description : 'Let’s start by defining what a portfolio website is. At its most basic form, a portfolio website provides professional information about an individual or a company and presents a showcase of their work. The Purpose of a Portfolio Website In the design process, the first step should be a statement of purpose. Answering the question Why are we doing this? should be done before any work is started. By specifying the purpose of a design, the process becomes meaningful.', temp : ''},
+                   {name : 'School websites',img :'', description : '', temp : ''},
                    {name : '',img :'', description : '', temp : ''},
                    {name : '',img :'', description : '', temp : ''},
                    {name : '',img :'', description : '', temp : ''},
@@ -39,9 +39,9 @@
       var type = document.getElementById('types')
      types.forEach(element => {
       type.innerHTML += `
-      <div class="m-2 p-2 col-lg-3 col-sm-12">
+      <div class="p-2 col-lg-4 col-sm-12">
             <div class="card  w-100">
-              <img class="card-img-top" src='${element.img}'alt="Card image cap">
+              <img class="card-img-top" src='${element.img}'alt="Card image cap" height='300px'>
               <div class="card-body">
                 <h5 class="card-title">${element.name}</h5>
                 <p class="card-text">${element.description}</p>
