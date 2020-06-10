@@ -40,7 +40,14 @@
           {header : "Model graphics", bg_img :"../images/models.jfif", extra : "extra-text", },
           {header : "Web Design and page layout", bg_img :"../images/webdesign.jfif", extra : "extra-text", }
         ]
-        graphs.map(({header, bg_img, extra})=>{
+        graphs.map(({header, bg_img, extra}, index)=>{
+          localStorage.setItem(index+"graphics",JSON.stringify({
+            order : header,
+            img : bg_img,
+            description : extra,
+            service : "Graphics and Photo Editing",
+            price_range : "Negotiable"
+          }))
         document.getElementById("body").innerHTML += 
         `  <div class="p-2 col-lg-4 col-sm-12">
             <div class="bg-white border w-100">
@@ -48,11 +55,12 @@
               <img class="w-100" src='${bg_img}'alt="${header + " picture"}" height='250px'>
               <div class="card-body">
                 <p class="card-text">${extra}</p>
-                <a href="#" class="btn btn-primary">order</a>
+                <a href="order.html?order=${index+"graphics"}" class="btn btn-primary">order</a>
               </div>
             </div>
      </div>`
-        })
+        }) 
+        alert(window.navigator.userAgent)
         </script>
       </div>
     </main>

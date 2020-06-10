@@ -21,7 +21,7 @@
         </div>
         <div class="position-relative text-center center" style="top: 35%;">
           <div class="font-sm" style="font-size: 100%">Responsive Websites</div>
-          <button class="btn-outline-light btn pl-5 pr-5" style="background-image: inherit;">Start your Website</button>
+         <a href="order.html" target="_blank" rel="noopener noreferrer"> <button class="btn-outline-light btn pl-5 pr-5" style="background-image: inherit;">Start your Website</button></a>
           <button class="btn-outline-light btn pl-5 pr-5" style="background-image: inherit;">Update a website</button>
         </div>
       </div>
@@ -47,7 +47,14 @@
                   //  {name : '',img :'', description : '', temp : ''},
     ]
       var type = document.getElementById('types')
-     types.forEach(element => {
+     types.forEach((element, index )=> {
+      localStorage.setItem(index+"websites",JSON.stringify({
+            order : element.name,
+            img : element.img,
+            description : element.description,
+            service : "Graphics and Photo Editing",
+            price_range : "Negotiable"
+          }));
       type.innerHTML += `
       <div class="p-2 col-lg-4 col-sm-12">
             <div class="bg-white border w-100">
@@ -55,7 +62,7 @@
               <img class="w-100" src='${element.img}'alt="Card image cap" height='300px'>
               <div class="card-body">
                 <p class="card-text">${element.description}</p>
-                <a href="#" class="btn btn-primary">order</a>
+                <a href="order.html?order=${index+"websites"}" class="btn btn-primary">order</a>
               </div>
             </div>
      </div>

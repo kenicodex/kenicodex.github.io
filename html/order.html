@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="css">
+</head>
+<body>
+    <navbar class="d-flex w-auto bg-dark" id='navbar'>
+    </navbar>
+    <script src="../javascript/navbar.js"></script>
+    <main class="">
+        <aside class="position-fixed bg-dark shadow" id='sidebar' >
+        </aside>
+
+        <div class="d-lg-flex m-auto">
+            <div class="col-lg-6 col-sm-12">
+                <div class="p-lg-4 m-3" id="desc">
+                    <img src="" alt="" class="bg-dark p-5 m-2" width="250px" height="200px" />
+                    <p>Service  : </p>
+                    <p>Order : </p>
+                    <p> price range : </p>
+                    <p>Description  : </p>  
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+            <form action="" class="p-lg-4 m-3" onsubmit="order(event)">
+                    <h5>Please fill in the fields</h5>
+                    <div class="alert alert-danger" role="" id="error">
+                    </div>
+                    <p><input type="text" class="bg-light m-2 p-1 w-100 border" id="name" placeholder="full name"> </p>
+                    <p><input type="text" class="bg-light m-2 p-1 w-100 border" id="phone" placeholder="Phone"></p>
+                    <p> <input type="email"class="bg-light m-2 p-1 w-100 border" id="email" placeholder="email"> </p>
+                    <p><input type="text" class="bg-light m-2 p-1 w-100 border" id="companyname" placeholder="company name"></p>
+                    <p> how did you about us ?</p>
+                    <a href="https://wa.me/07054008872?text=My%20name%20is%20+ name,%20phone%20number%20%20:%20${phone}%20,%20email%20address%20:%20${email}%20,%20company%20name%20:%20${com}"><button class="btn-outline-success btn m-2 p-1 w-100 border" > Continue</button></a>
+                </form>
+            </div>
+        </div>
+        <div class="w-100 jumbotron text-center bg-success mb-0">Thanks for consider Digital solutions <br> 
+            after you fill in the details we will refer you to our Graphics designers,for further communcation with seven days we will provide you with your requested service
+         </div>
+    </main>
+    <script>
+        let x = window.location.href;
+        let newX = x.substring(x.indexOf("=")+1,x.length)
+        newX = newX.replace("%20", " ")
+            let item  = localStorage.getItem(newX)
+            item = JSON.parse(item)
+            document.getElementById("desc").innerHTML = `
+            <img src=${item.img} alt="" class="bg-" width="100%" height="auto" />
+                    <p>Service  :  ${item.service}</p>
+                    <p>Order :${item.order} </p>
+                    <p> price range :  ${item.price_range}  </p>
+                    <p>Description  :  ${item.description}  </p>  
+            `
+            var error = document.getElementById("error")
+                error.style.display = "none";
+            function order(e) {
+                var name = document.getElementById("name").value
+                var phone = document.getElementById("phone").value
+                if(name == "" || phone == ""){e.preventDefault()
+                    error.style.display = "block";
+                error.innerHTML = "Please enter at least a name and phone number !"
+                }else{
+                // window.location.href("https://wa.me/07054008872?text=My%20name%20is%20"+ name",%20phone%20number%20%20:%20${phone}%20,%20email%20address%20:%20${email}%20,%20company%20name%20:%20${com}")
+                    error.style.display = "none";
+                }
+            }
+    </script>
+
+</body>
+<script src="../javascript/footer.js"></script>
+<script src="../javascript/sidebar.js"></script>
+<script src="../javascript/head.js"></script>
+</html>
