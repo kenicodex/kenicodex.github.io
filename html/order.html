@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="col-lg-6 col-sm-12">
-            <form action="" class="p-lg-4 m-3" onsubmit="order(event)">
+            <div class="p-lg-4 m-3" >
                     <h5>Please fill in the fields</h5>
                     <div class="alert alert-danger" role="" id="error">
                     </div>
@@ -30,8 +30,8 @@
                     <p> <input type="email"class="bg-light m-2 p-1 w-100 border" id="email" placeholder="email"> </p>
                     <p><input type="text" class="bg-light m-2 p-1 w-100 border" id="companyname" placeholder="company name"></p>
                     <p> how did you about us ?</p>
-                    <a href="https://wa.me/07054008872?text=My%20name%20is%20+ name,%20phone%20number%20%20:%20${phone}%20,%20email%20address%20:%20${email}%20,%20company%20name%20:%20${com}"><button class="btn-outline-success btn m-2 p-1 w-100 border" > Continue</button></a>
-                </form>
+                    <button class="btn-outline-success btn m-2 p-1 w-100 border" onclick="order()" > Continue</button>
+            </div>
             </div>
         </div>
         <div class="w-100 jumbotron text-center bg-success mb-0">Thanks for consider Digital solutions <br> 
@@ -43,6 +43,7 @@
         let newX = x.substring(x.indexOf("=")+1,x.length)
         newX = newX.replace("%20", " ")
             let item  = localStorage.getItem(newX)
+            if(!item){window.location.assign("index.html")}
             item = JSON.parse(item)
             document.getElementById("desc").innerHTML = `
             <img src=${item.img} alt="" class="bg-" width="100%" height="auto" />
@@ -53,14 +54,16 @@
             `
             var error = document.getElementById("error")
                 error.style.display = "none";
-            function order(e) {
+            function order() {
                 var name = document.getElementById("name").value
                 var phone = document.getElementById("phone").value
-                if(name == "" || phone == ""){e.preventDefault()
+                var email = document.getElementById("email").value
+                var com = document.getElementById("companyname").value
+                if(name == "" || phone == ""){
                     error.style.display = "block";
                 error.innerHTML = "Please enter at least a name and phone number !"
                 }else{
-                // window.location.href("https://wa.me/07054008872?text=My%20name%20is%20"+ name",%20phone%20number%20%20:%20${phone}%20,%20email%20address%20:%20${email}%20,%20company%20name%20:%20${com}")
+                window.location.assign("https://wa.me/07054008872?text=My%20name%20is "+name+"%20,%20phone%20number%20%20:%20"+phone+"%20,%20email%20address%20:%20"+email+"%20,%20company%20name%20:%20$"+com)
                     error.style.display = "none";
                 }
             }
