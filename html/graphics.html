@@ -12,7 +12,7 @@
     <navbar class="d-flex w-auto bg-dark" id='navbar'>
     </navbar>
     <script src="../javascript/navbar.js"></script>
-    <main class="w-100">
+    <main class="w-100" style="background-color: #2d3741 ;">
 
       <div id='slide' class="w-100 bg-dark h1 text-light">  
       <div class="position-relative w-100 d-flex" style="top:40%;">
@@ -20,37 +20,40 @@
         <button class="position-absolute btn m-2" style="right: 0;" onclick="change(+1)"><i class="fa fa-angle-right"></i></button>
       </div>
         <div class="position-relative text-center center" style="top: 35%;">
-          <!-- <style>
-              @media screen and (max-width: 992px){
-                .font-sm{ } 
-              }
-          </style> -->
-          <div class="font-sm" style="font-size: 90%">High-End  Graphics</div>
-          <button class="btn-outline-light btn pl-5 pr-5" style="background-image: inherit;">Get a design</button>
-          <button class="btn-outline-light btn pl-5 pr-5" style="background-image: inherit;">Request photo editing</button>
+        
+          <div class="font-sm" style="font-size: 90%">High-End  Graphics</div> 
+          <a href="https://wa.me/07054008872?text=I%20would%20like%20to%20get%20a%20graphic%20design">
+            <button class="btn-outline-light btn pl-5 pr-5" style="background-image: inherit;">Get a design</button></a> 
+          <a href="https://wa.me/07054008872?text=I%20would%20like%20to%20Request%20a%20photo%20editing">
+          <button class="btn-outline-light btn pl-5 pr-5" style="background-image: inherit;">Request photo editing</button></a>
         </div>
       </div>
-      <div class="container p-lg-5">
-        <div class="text-center bg-dark jumbotron shadow text-light h3" style="cursor: pointer;"
-         onclick="seemore(this)"> Graphics are useful for success business  
-          <div class="bg-light rounded extra-text h6 text-dark p-2"> extra-textmfvv <br> <br> <br> <br> </div>
-        </div>
-        <div class="text-center bg-dark jumbotron shadow text-light h3" style="cursor: pointer;"
-         onclick="seemore(this)"> why you need graphics
-          <div class="bg-light rounded extra-text h6 text-dark p-2"> extra-text</div>
-        </div> 
-        <div class="text-center bg-dark jumbotron shadow text-light h3" style="cursor: pointer;"
-         onclick="seemore(this)"> Photo editing that grasps the attention of your customers 
-          <div class="bg-light rounded extra-text h6 text-dark p-2"> extra-text</div>
-        </div>
-        <div class="text-center bg-dark jumbotron shadow text-light h3" style="cursor: pointer;"
-         onclick="seemore(this)"> Advertisement packages , making banners panfletes bills and so on
-          <div class="bg-light rounded extra-text h6 text-dark p-2"> extra-text</div>
-        </div>
-        <div class="text-center bg-dark jumbotron shadow text-light h3" style="cursor: pointer;"
-         onclick="seemore(this)"> Create A cartoon
-          <div class="bg-light rounded extra-text h6 text-dark p-2"> extra-text</div>
-        </div>
+
+      <div class="row container m-auto"  id="body" >
+        <script>
+          var graphs = [
+          // {header : "Graphics are useful for success business", bg_img :"../images/banner.jfif", extra : "extra-text", },
+          // {header : "why you need graphics", bg_img :"../images/usesofgraphis.jfif", extra : "extra-text", }, 
+          {header : " Photo editing that grasps the attention of your customers", bg_img :"../images/Professional-Video-Editing-Tips-and-Tricks.jpg", extra : "extra-text", }, 
+          {header : "Marketing & advertising graphic design", bg_img :"../images/banner.jfif", extra : "extra-text", },
+          {header : " Create A cartoon", bg_img :"../images/cartonn.jfif", extra : "extra-text", },
+          {header : "Model graphics", bg_img :"../images/models.jfif", extra : "extra-text", },
+          {header : "Web Design and page layout", bg_img :"../images/webdesign.jfif", extra : "extra-text", }
+        ]
+        graphs.map(({header, bg_img, extra})=>{
+        document.getElementById("body").innerHTML += 
+        `  <div class="p-2 col-lg-4 col-sm-12">
+            <div class="bg-white border w-100">
+              <h5 class="card-title p-3">${header}</h5>
+              <img class="w-100" src='${bg_img}'alt="${header + " picture"}" height='250px'>
+              <div class="card-body">
+                <p class="card-text">${extra}</p>
+                <a href="#" class="btn btn-primary">order</a>
+              </div>
+            </div>
+     </div>`
+        })
+        </script>
       </div>
     </main>
     <footer id="footer"></footer>
@@ -60,4 +63,3 @@
 <script src="../javascript/sidebar.js"></script>
 <script src="../javascript/head.js"></script>
 </html>
-
