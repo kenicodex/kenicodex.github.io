@@ -59,16 +59,17 @@
                 var phone = document.getElementById("phone").value
                 var email = document.getElementById("email").value
                 var com = document.getElementById("companyname").value
+                let whatsnumber = "2347054008872"
+                if(item.service == "Web degign and development"){whatsnumber = "2348085503290"}
                 if(name == "" || phone == ""){
                     error.style.display = "block";
                 error.innerHTML = "Please enter at least a name and phone number !"
                 }else{
-                window.location.assign("https://wa.me/2347054008872?text=My%20name%20is "+name+"%20,%20phone%20number%20%20:%20"+phone+"%20,%20email%20address%20:%20"+email+"%20,%20company%20name%20:%20$"+com)
+                window.location.assign("https://wa.me/"+whatsnumber+"?text=My%20name%20is "+name+"%20,%20phone%20number%20%20:%20"+phone+"%20,%20email%20address%20:%20"+email+"%20,%20company%20name%20:%20$"+com)
                     error.style.display = "none";
                 }
             }
     </script>
-
 </body>
 <script src="../javascript/footer.js"></script>
 <script src="../javascript/sidebar.js"></script>
