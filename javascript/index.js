@@ -40,7 +40,7 @@ function dothis() {
         element.style.width = "0"
         setTimeout(() => {
             element.style= "width : 100%; transition: width 2s;"
-        }, 500);
+        }, 100);
         
     }
 }
