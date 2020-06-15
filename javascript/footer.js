@@ -4,14 +4,14 @@ const newLocal = `
 
 </style>
 <div class="bg-dark w-100 position-relative d-lg-flex">
-    <div class="col-lg-4 col-md-1" style="height:200px;">
+    <div class="col-lg-4 col-md-12" style="height:200px;">
         <div class="p-2">
             <h3 class="text-warning"> About us </h3>
             <p class="pl-1 text-white"> We are society that helps with web development and graphic design </p>
         </div>
     </div> 
 
-    <div class="col-lg-4 col-md-1" style="height:200px;">
+    <div class="col-lg-4 col-md-12" style="height:200px;">
         <div class="p-2">
             <h3 class="text-warning"> Contact us </h3>
             <div>
@@ -23,7 +23,7 @@ const newLocal = `
         </div>
     </div> 
 
-    <div class="col-lg-4 col-md-1" style="height:200px;">
+    <div class="col-lg-4 col-md-12" style="height:200px;">
         <div class="p-2">
             <h3 class="text-info">Useful links</h3>
             <a href="#" >About us </a> <br>

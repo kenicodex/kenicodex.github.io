@@ -16,51 +16,54 @@
           <div id="chat">
               
           </div>
-        <form onsubmit="send(event)">  <input type="text" id="message" class="p-1 border m-2 form-control" placeholder="enter your message">
+        <form onsubmit="send(event)">  
+        <input type="text" id="message" class="p-1 border m-2 form-control bg-light" placeholder="enter your message">
             
         </form>
+            <script>
+                var message =  document.getElementById("message")
+                 var container =  document.getElementById("chat")
+                function send(e) {
+                    e.preventDefault()
+                    if(message.value != ""){
+                        writeText(message.value,"50%", "#312c80")
+                    }
+                    replies()
+                    message.value = ""
+                }
+                del =(a)=>{a.style.display="none"}
+                writeText =(text, position, color)=>{
+                        container.innerHTML += `
+                        <div style="width:40%;background-color:${color};left:${position};" class="rounded m-1 p-2 position-relative" onclick="del(this)">
+                            ${text} 
+                        </div>
+                        `
+                }
+                function replies(){
 
-          <script>
-            function createMessage(position,color, message) {
-            let li = document.createElement("div")   
-            let txt = document.createTextNode(message)  
-            li.appendChild(txt) 
-            document.getElementById("chat").appendChild(li) 
-            li.style = `height:auto;background-color: ${color};padding:1em;margin:2px;border-radius:5px; width:50%;margin-${position}:50%;`  
-            process(message)
-            }
-          function send(e){
-            e.preventDefault()
-            var customer  = document.getElementById("message").value  
-            createMessage("left","#527ebf",customer)
-            document.getElementById("message").value = ""
-          }
-          const process =(question)=>{
-            var greet = ['hello', 'hi', 'whatsup', 'hey']
-            var bye = ['', 'bye', 'good night']
-            var createweb = (question.includes("buy a website")||question.includes("make a website") || question.includes("create a website"))
-            var creategraphic = (question.includes("buy a graphic")||question.includes("make a graphic") || question.includes("create a graphic")||question.includes("Edit a photo"))
-            var typeweb = (question.includes("how much"))
-            var bye = (question.includes("goodbye")||question.includes("bye") || question.includes("good night") || question.includes("talk to you later"))
-            if (greet.includes(question.toLowerCase())){
-                createMessage("right","#f600fa","Hi there,how are you feeling today? how may we help you? do yo wish to create a website or request a graphic design")
-            }else if(createweb){
-                createMessage("right","#f600fa","Simply visit is our website page or contact us on 08056499531, 08085503290, 07054008872, also what can kind of website would ou like to create? check website page for type of websites we create")
-            }else if(creategraphic){
-                createMessage("right","#f600fa","Simply visit is our graphics page or contact us on 08056499531, 08085503290, 07054008872, also what aspect of graphics are you interested in? Photo editing,creating banners, palmflettes, photoshot editing?  ")
-            }else if(bye){
-                createMessage("right","#f600fa","Thanks for patronizing us, please do visit again and tell your friends about us. Bye now 👋🏽 ")
-            }else if(typeweb){
-                createMessage("right","#f600fa","Our websites and graphics aren't expensise at all, you can create one at 40% discount, for much information type \"more info\" ")
-            }else if(question == "more info"){
-                createMessage("right","#f600fa","price as low as N2500 per page of a website, price for graphics and photo editing range N2000 to N10000, if you would like to chat with a human being type \"live chat\"")
-            }else if(question == "live chat"){
-                createMessage("right","#f600fa","price as low as N2500 per page of a website, price for graphics and photo editing range N2000 to N10000, if you would like to chat with a human being type \"live chat\"")
-            }else if(question == ""){
-                createMessage("right","#f600fa","Sorry you didn't type amy thing kindly specify your message")
-            }
-          }          
-          </script>
+                    var x = message.value
+                    x = x.toLowerCase()
+                    var greet = ( x.includes("hi")||x.includes("hello")||x.includes("hey")||x.includes("Good morning")||x.includes("Good a")||x.includes("hi"))
+                    var request = ( x.includes("create a website")||x.includes("buy a website")||x.includes("a website"))
+                    var req = ( x.includes("create a graphic design")||x.includes("buy a graphic design")||x.includes("a graphic design")||x.includes("edit a photo")||x.includes("edit"))
+                    var live = (x == "yes"||x=="sure"||x=="yes please")
+                   if (greet) {
+                        writeText("Hi there, how may we help you?","0%","#cc0243")
+                   }else if(request){
+                        writeText("Simply ","0%","#cc0243")
+                   }else if(req){
+                        writeText("Simply ","0%","#cc0243")
+                   }else if(live){
+                    container.innerHTML += `
+                        <div style="width:40%;background-color:#cc0243;left:0;" class="rounded m-1 p-2 position-relative" onclick="del(this)">
+                           <a href="https://wa.me?text=hey, i am interest in a your services"><button class="btn btn-info">Click here</button></a>to talk to our agents
+                        </div>
+                        `
+                   }else{
+                    writeText("Sorry didnt quite get tha. Would you like to talk to a like person? type yes if so","0%","#cc0243")
+                   }
+                }
+            </script>
       </div>
 
   </div>
