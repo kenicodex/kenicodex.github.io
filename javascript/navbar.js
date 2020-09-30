@@ -1,7 +1,7 @@
 var navbar = document.getElementById('navbar')
 var style = 'font-family:cursive; width:auto'
 navbar.innerHTML = `
-      <div class="brand h4 m-3 text-info" style=${style}>Sleek Codes</div>
+      <div class="brand h4 m-3 text-info" style=${style}>WsebnGraphics</div>
       <nav class="d-flex w-auto">
         <a href="index.html" class="p-3 pl-5 pr-5">Home  <i class="fa fa-home"> </i> </a>
         <a href="graphics.html" class="p-3 pl-5 pr-5">Graphics </a>
